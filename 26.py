@@ -1,3 +1,14 @@
+from functools import reduce
+
+def myreduce(callback, iterable, initial=None):
+    it = iter(iterable)
+    if initial is None:
+        value = next(it)
+    else:
+        value = initial
+    for element in it:
+        value = callback(value, element)
+    return value
 # Test case 1: Given a multiword name, print its first letters
 def get_initials(initials, name):
     initials += name[0]
