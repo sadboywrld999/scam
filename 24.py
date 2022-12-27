@@ -1,3 +1,8 @@
+def mymap(callback, iterable):
+    result = []
+    for item in iterable:
+        result.append(callback(item))
+    return result
 # Test case 1: Create a list of squares of odd numbers from 1 to n
 def square(x):
     return x**2
