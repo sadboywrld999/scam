@@ -1,3 +1,9 @@
+def myfilter(callback, iterable):
+    result = []
+    for item in iterable:
+        if callback(item):
+            result.append(item)
+    return result
 # Test case 1: Given a list of strings, remove all strings having first character as digit
 def first_char_is_not_digit(word):
     return not word[0].isdigit()
